@@ -32,8 +32,8 @@ class MessageForm extends Component{
 }
 
 MessageForm.propTypes = {
-  activeChannel: PropTypes.object.isRequired,
-  addMessage: PropTypes.func.isRequired
+  // activeChannel: PropTypes.object.isRequired,
+  // addMessage: PropTypes.func.isRequired
 }
 
 export default MessageForm

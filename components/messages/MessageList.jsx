@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
-import Message from './Message.jsx';
 import PropTypes from 'prop-types';
+import Message from './Message.jsx';
 
 class MessageList extends Component{
   render(){
     return(
       <ul>{
           this.props.messages.map( message =>{
-          return <Message
+          return (<Message
               message={message}
               key={message.id}
-            />
+            />)
           })
-        }</ul>
+        }
+      </ul>
     )
   }
 }
 
 MessageList.propTypes = {
-  messages: PropTypes.array.isRequired
+  // messages: PropTypes.array.isRequired
 }
 
-export default UserList;
+export default MessageList;
