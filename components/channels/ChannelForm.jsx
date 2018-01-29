@@ -29,4 +29,4 @@ ChannelForm.propTypes = {
   // addChannel: PropTypes.func.isRequired
 }
 
-export default ChannelForm
+export default ChannelForm;
