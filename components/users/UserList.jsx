@@ -7,7 +7,8 @@ class UserList extends Component{
     return(
       <ul>{
         this.props.users.map( user =>{
-          return (<User user={user} key={user.id} />)
+          return (<User user={user}
+            key={user.id} />)
         })
       }</ul>
     )
@@ -18,4 +19,4 @@ UserList.propTypes = {
   users: PropTypes.array.isRequired
 }
 
-export default UserList;
+export default UserList
