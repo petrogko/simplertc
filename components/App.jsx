@@ -4,18 +4,20 @@ import UserSection from './users/UserSection.jsx';
 import MessageSection from './messages/MessageSection.jsx';
 import Socket from '../socket.js';
 
-class App extends Component{
+class App extends Component {
   constructor(props){
     super(props);
     this.state = {
       channels: [],
+      users: [],
+      messages: [],
       activeChannel: {},
-      messages: {},
       connected: false
     };
   }
   componentDidMount() {
-    let socket = this.socket = new Socket();
+    let ws = new WebSocket('ws://localhost:4000');
+    let socket = this.socket = new Socket(ws);
     socket.on('connect', this.onConnect.bind(this));
     socket.on('disconnect', this.onDisconnect.bind(this));
     socket.on('channel add', this.onAddChannel.bind(this));

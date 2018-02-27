@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import MessageForm from './MessageForm.jsx';
 import MessageList from './MessageList.jsx';
+import MessageForm from './MessageForm.jsx';
 
 class MessageSection extends Component{
   render(){
@@ -22,9 +22,9 @@ class MessageSection extends Component{
 }
 
 MessageSection.propTypes = {
-  // messages: PropTypes.array.isRequired,
-  // activeChannel: PropTypes.object.isRequired,
-  // addMessage: PropTypes.func.isRequired
-}
+  messages: PropTypes.array.isRequired,
+  activeChannel: PropTypes.object.isRequired,
+  addMessage: PropTypes.func.isRequired
+};
 
 export default MessageSection;

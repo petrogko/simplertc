@@ -4,11 +4,12 @@ import PropTypes from 'prop-types';
 
 class UserList extends Component{
   render(){
-    return(
+    return (
       <ul>{
         this.props.users.map( user =>{
-          return (<User user={user}
-            key={user.id} />)
+          return (
+            <User key={user.id} user={user} />
+          )
         })
       }</ul>
     )
@@ -17,6 +18,6 @@ class UserList extends Component{
 
 UserList.propTypes = {
   users: PropTypes.array.isRequired
-}
+};
 
 export default UserList

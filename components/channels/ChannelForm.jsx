@@ -26,7 +26,7 @@ class ChannelForm extends Component{
 }
 
 ChannelForm.propTypes = {
-  // addChannel: PropTypes.func.isRequired
-}
+  addChannel: PropTypes.func.isRequired
+};
 
 export default ChannelForm;

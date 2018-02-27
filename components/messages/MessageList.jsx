@@ -6,20 +6,18 @@ class MessageList extends Component{
   render(){
     return(
       <ul>{
-          this.props.messages.map( message =>{
-          return (<Message
-              message={message}
-              key={message.id}
-            />)
-          })
-        }
-      </ul>
+        this.props.messages.map( message =>{
+          return (
+            <Message key={message.id} message={message} />
+          )
+        })
+      }</ul>
     )
   }
 }
 
 MessageList.propTypes = {
-  // messages: PropTypes.array.isRequired
-}
+  messages: PropTypes.array.isRequired
+};
 
 export default MessageList;
